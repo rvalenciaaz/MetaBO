@@ -18,8 +18,9 @@
 # Implementation of the basic gym-environment for the MetaBO framework.
 # ******************************************************************
 
-import gym
-import gym.spaces
+import gymnasium as gym
+#changing declaration
+import gymnasium.spaces as gym_spaces
 import numpy as np
 import sobol_seq
 import GPy
@@ -72,7 +73,7 @@ class MetaBO(gym.Env):
             self.af_opt_startpoints_t = None  # best k evaluations of af on multistart_grid
             self.af_maxima_t = None  # the resulting local af_maxima
             self.N_MS = kwargs["N_MS"]
-            N_MS_per_dim = np.int(np.floor(self.N_MS ** (1 / self.D)))
+            N_MS_per_dim = int(np.floor(self.N_MS ** (1 / self.D)))
             self.multistart_grid, _ = create_uniform_grid(self.domain, N_MS_per_dim)
             self.N_MS = self.multistart_grid.shape[0]
             self.k = kwargs["k"]  # number of multistarts
@@ -115,13 +116,15 @@ class MetaBO(gym.Env):
             self.n_features += 1
         if "x" in self.features:
             self.n_features += self.D
-        self.observation_space = gym.spaces.Box(low=-100000.0, high=100000.0,
+        #modified by _
+        self.observation_space = gym_spaces.Box(low=-100000.0, high=100000.0,
                                                 shape=(self.cardinality_xi_t, self.n_features),
                                                 dtype=np.float32)
         self.pass_X_to_pi = kwargs["pass_X_to_pi"]
 
         # action space: index of one of the grid points
-        self.action_space = gym.spaces.Discrete(self.cardinality_xi_t)
+        #modified by _
+        self.action_space = gym_spaces.Discrete(self.cardinality_xi_t)
 
         # optimization step
         self.t = None
@@ -212,9 +215,11 @@ class MetaBO(gym.Env):
         if self.kwargs.get("plot"):
             self.plot()
         next_state = self.get_state(self.xi_t)
-        done = self.is_terminal()
+        #replacing by dual bool
+        terminated = self.is_terminal()
+        truncated = self.is_terminal()
 
-        return next_state, reward, done, {}
+        return next_state, reward, terminated, truncated, {}
 
     def reset_step_counters(self):
         self.t = 0
@@ -685,7 +690,8 @@ class MetaBO(gym.Env):
         # compute the simple regret
         y_diffs = self.y_max - self.Y
         simple_regret = np.min(y_diffs)
-        reward = np.asscalar(simple_regret)
+        #update to .item
+        reward = simple_regret.item()
 
         # apply reward transformation
         if self.reward_transformation == "none":

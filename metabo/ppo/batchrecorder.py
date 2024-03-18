@@ -23,16 +23,19 @@ import os
 
 os.environ["OMP_NUM_THREADS"] = "1"  # on some machines this is needed to restrict torch to one core
 
-from namedlist import namedlist
+#replacing namedlist by collections.namedtuple
+#from collections import namedtuple
+
 import random
-import gym
+import gymnasium as gym
 import numpy as np
 import multiprocessing as mp
 import torch
 import itertools
 import time
 
-Transition = namedlist("Transition", ["state", "action", "reward", "value", "new", "tdlamret", "adv"])
+from recordclass import recordclass
+Transition = recordclass("Transition", ["state", "action", "reward", "value", "new", "tdlamret", "adv"])
 
 
 class EnvRunner(mp.Process):
@@ -97,7 +100,9 @@ class EnvRunner(mp.Process):
 
         while not self.is_full():
             action, value = self.act(state)
-            next_state, reward, done, _ = self.env.step(action)
+            #add truncated
+            next_state, reward, terminated, truncated, _ = self.env.step(action)
+            done = terminated or truncated
             self.push(state, action, reward, value, new)
 
             if done:

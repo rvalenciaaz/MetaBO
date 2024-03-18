@@ -1,0 +1,130 @@
+
+******************** ITERATION  0 ********************
+ RUN STATISTICS (BEFORE OPTIMIZATION):
+   environment          = MetaBO-BRA-v0
+   n_timesteps  = 1200 (0.05%)
+   n_optsteps   = 0
+   t_total      = 11.69s
+ BATCH STATISTICS (BEFORE OPTIMIZATION):
+   n_workers    = 10
+   worker_seeds = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+   size         = 1200
+    per_worker  = [120, 120, 120, 120, 120, 120, 120, 120, 120, 120]
+   avg_step_rew = 1.215
+   avg_init_rew = 0.5797
+   avg_term_rew = 1.561
+   avg_ep_rew   = 36.44
+   n_new        = 40
+    per_worker  = [4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+   avg_ep_len   = 30.00
+   t_batch      = 11.32s (106sps)
+ OPTIMIZING...
+   loss_ppo = -4.788e-07, loss_value =  275.1, loss_ent = -6.873, loss =  275
+   loss_ppo = -2.564e-06, loss_value =  274.5, loss_ent = -6.873, loss =  274.5
+   loss_ppo = -1.532e-05, loss_value =  271, loss_ent = -6.873, loss =  270.9
+   loss_ppo = -7.715e-05, loss_value =  253.4, loss_ent = -6.873, loss =  253.3
+  Took 5.03s
+
+******************** ITERATION  1 ********************
+ RUN STATISTICS (BEFORE OPTIMIZATION):
+   environment          = MetaBO-BRA-v0
+   n_timesteps  = 2400 (0.10%)
+   n_optsteps   = 80
+   t_total      = 26.47s
+ BATCH STATISTICS (BEFORE OPTIMIZATION):
+   n_workers    = 10
+   worker_seeds = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+   size         = 1200
+    per_worker  = [120, 120, 120, 120, 120, 120, 120, 120, 120, 120]
+   avg_step_rew = 1.411
+   avg_init_rew = 0.1338
+   avg_term_rew = 1.752
+   avg_ep_rew   = 42.34
+   n_new        = 40
+    per_worker  = [4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+   avg_ep_len   = 30.00
+   t_batch      = 9.70s (124sps)
+ OPTIMIZING...
+   loss_ppo =  5.689e-06, loss_value =  301.7, loss_ent = -6.873, loss =  301.6
+   loss_ppo = -1.968e-06, loss_value =  176.7, loss_ent = -6.873, loss =  176.6
+   loss_ppo = -1.354e-05, loss_value =  130.9, loss_ent = -6.873, loss =  130.8
+   loss_ppo = -2.571e-05, loss_value =  120.4, loss_ent = -6.873, loss =  120.3
+  Took 2.91s
+
+******************** ITERATION  2 ********************
+ RUN STATISTICS (BEFORE OPTIMIZATION):
+   environment          = MetaBO-BRA-v0
+   n_timesteps  = 3600 (0.15%)
+   n_optsteps   = 160
+   t_total      = 39.02s
+ BATCH STATISTICS (BEFORE OPTIMIZATION):
+   n_workers    = 10
+   worker_seeds = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+   size         = 1200
+    per_worker  = [120, 120, 120, 120, 120, 120, 120, 120, 120, 120]
+   avg_step_rew = 1.289
+   avg_init_rew = -0.0824
+   avg_term_rew = 1.902
+   avg_ep_rew   = 38.66
+   n_new        = 40
+    per_worker  = [4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+   avg_ep_len   = 30.00
+   t_batch      = 9.60s (125sps)
+ OPTIMIZING...
+   loss_ppo = -4.116e-06, loss_value =  111.4, loss_ent = -6.873, loss =  111.3
+   loss_ppo = -3.345e-05, loss_value =  101.3, loss_ent = -6.873, loss =  101.2
+   loss_ppo = -6.898e-05, loss_value =  92.9, loss_ent = -6.873, loss =  92.83
+   loss_ppo = -0.0002243, loss_value =  85.38, loss_ent = -6.873, loss =  85.31
+  Took 2.96s
+
+******************** ITERATION  3 ********************
+ RUN STATISTICS (BEFORE OPTIMIZATION):
+   environment          = MetaBO-BRA-v0
+   n_timesteps  = 4800 (0.20%)
+   n_optsteps   = 240
+   t_total      = 53.10s
+ BATCH STATISTICS (BEFORE OPTIMIZATION):
+   n_workers    = 10
+   worker_seeds = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+   size         = 1200
+    per_worker  = [120, 120, 120, 120, 120, 120, 120, 120, 120, 120]
+   avg_step_rew = 1.431
+   avg_init_rew = 0.163
+   avg_term_rew = 1.825
+   avg_ep_rew   = 42.92
+   n_new        = 40
+    per_worker  = [4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+   avg_ep_len   = 30.00
+   t_batch      = 11.07s (108sps)
+ OPTIMIZING...
+   loss_ppo = -0.000306, loss_value =  110, loss_ent = -6.873, loss =  109.9
+   loss_ppo = -0.003151, loss_value =  99.05, loss_ent = -6.873, loss =  98.98
+   loss_ppo = -0.01344, loss_value =  87.85, loss_ent = -6.871, loss =  87.77
+   loss_ppo = -0.0261, loss_value =  76.89, loss_ent = -6.866, loss =  76.8
+  Took 3.11s
+
+******************** ITERATION  4 ********************
+ RUN STATISTICS (BEFORE OPTIMIZATION):
+   environment          = MetaBO-BRA-v0
+   n_timesteps  = 6000 (0.25%)
+   n_optsteps   = 320
+   t_total      = 68.98s
+ BATCH STATISTICS (BEFORE OPTIMIZATION):
+   n_workers    = 10
+   worker_seeds = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+   size         = 1200
+    per_worker  = [120, 120, 120, 120, 120, 120, 120, 120, 120, 120]
+   avg_step_rew = 1.244
+   avg_init_rew = 0.5258
+   avg_term_rew = 1.553
+   avg_ep_rew   = 37.32
+   n_new        = 40
+    per_worker  = [4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+   avg_ep_len   = 30.00
+   t_batch      = 12.70s (95sps)
+ OPTIMIZING...
+   loss_ppo = -0.002408, loss_value =  68.33, loss_ent = -6.859, loss =  68.26
+   loss_ppo = -0.007142, loss_value =  60.85, loss_ent = -6.86, loss =  60.77
+   loss_ppo = -0.009399, loss_value =  54.32, loss_ent = -6.854, loss =  54.25
+   loss_ppo = -0.01064, loss_value =  49.36, loss_ent = -6.851, loss =  49.28
+  Took 3.09s

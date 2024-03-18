@@ -23,7 +23,7 @@
 import os
 from metabo.eval.evaluate import eval_experiment
 from metabo.eval.plot_results2 import plot_results2
-from gym.envs.registration import register, registry
+from gymnasium.envs.registration import register, registry
 from datetime import datetime
 
 # set evaluation parameters

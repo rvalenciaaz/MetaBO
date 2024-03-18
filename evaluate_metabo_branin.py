@@ -24,7 +24,7 @@ import os
 from metabo.eval.evaluate import eval_experiment
 from metabo.eval.plot_results import plot_results
 from metabo.policies.taf.generate_taf_data_branin import generate_taf_data_branin
-from gym.envs.registration import register, registry
+from gymnasium.envs.registration import register, registry
 from datetime import datetime
 
 # set evaluation parameters

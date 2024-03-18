@@ -27,7 +27,7 @@ import torch
 import torch.optim
 import time
 import numpy as np
-import gym
+import gymnasium as gym
 import os
 import pickle as pkl
 import copy

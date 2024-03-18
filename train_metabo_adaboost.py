@@ -30,7 +30,7 @@ from datetime import datetime
 from metabo.policies.policies import NeuralAF
 from metabo.ppo.ppo import PPO
 from metabo.ppo.plot_learning_curve_online import plot_learning_curve_online
-from gym.envs.registration import register
+from gymnasium.envs.registration import register
 
 rootdir = os.path.join(os.path.dirname(os.path.realpath(__file__)), "metabo")
 

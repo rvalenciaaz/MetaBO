@@ -21,7 +21,7 @@
 import os
 import json
 import numpy as np
-import gym
+import gymnasium as gym
 import pickle as pkl
 import torch
 from datetime import datetime
